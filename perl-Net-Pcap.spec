@@ -6,17 +6,23 @@ Summary:	Perl binding to the LBL pcap(3) packet capture library
 Summary(pl):	Dowi±zanie perla do biblioteki przechwytywania pakietów LBL pcap(3)
 Name:		perl-%{pdir}-%{pnam}
 Version:	0.04
-Release:	2
+Release:	3
 License:	GPL
 Group:		Development/Languages/Perl
 Group(cs):	Vývojové prostøedky/Programovací jazyky/Perl
+Group(da):	Udvikling/Sprog/Perl
 Group(de):	Entwicklung/Sprachen/Perl
 Group(es):	Desarrollo/Lenguajes/Perl
 Group(fr):	Development/Langues/Perl
+Group(is):	Þróunartól/Forritunarmál/Perl
+Group(it):	Sviluppo/Linguaggi/Perl
 Group(ja):	³«È¯/¸À¸ì/Perl
+Group(no):	Utvikling/Programmeringsspråk/Perl
 Group(pl):	Programowanie/Jêzyki/Perl
 Group(pt):	Desenvolvimento/Linguagens/Perl
 Group(ru):	òÁÚÒÁÂÏÔËÁ/ñÚÙËÉ/Perl
+Group(sl):	Razvoj/Jeziki/Perl
+Group(sv):	Utveckling/Språk/Perl
 Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 BuildRequires:	rpm-perlprov >= 3.0.3-16
 BuildRequires:	perl >= 5.6
