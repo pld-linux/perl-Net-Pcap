@@ -2,8 +2,8 @@
 %define         pdir Net
 %define         pnam Pcap
 
-Summary:	Perl binding to the LBL pcap(3) packet capture library
-Summary(pl):	Dowi±zanie perla do biblioteki przechwytywania pakietów LBL pcap(3)
+Summary:	Net::Pcap - Perl binding to the LBL pcap(3) packet capture library
+Summary(pl):	Net::Pcap - Dowi±zanie Perla do biblioteki przechwytywania pakietów LBL pcap(3)
 Name:		perl-%{pdir}-%{pnam}
 Version:	0.04
 Release:	5
