@@ -32,10 +32,8 @@ perl Makefile.PL
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 
 %{__make} install DESTDIR=$RPM_BUILD_ROOT
-gzip -9nf README 
 find $RPM_BUILD_ROOT -name .packlist | xargs -r rm -f
 
 %clean
@@ -43,7 +41,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
+%doc README
 %{perl_sitearch}/%{pdir}/%{pnam}.pm
 %{perl_sitearch}/auto/%{pdir}/%{pnam}
 %{_mandir}/man3/*
-%doc *.gz
