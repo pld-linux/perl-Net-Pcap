@@ -3,8 +3,8 @@
 %bcond_with	tests	# perform "make test" (require root privilleges)
 #
 %include	/usr/lib/rpm/macros.perl
-%define         pdir Net
-%define         pnam Pcap
+%define	pdir	Net
+%define	pnam	Pcap
 
 Summary:	Net::Pcap - Perl binding to the LBL pcap(3) packet capture library
 Summary(pl):	Net::Pcap - dowi±zanie Perla do biblioteki przechwytywania pakietów LBL pcap(3)
