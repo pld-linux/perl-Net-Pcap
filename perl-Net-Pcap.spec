@@ -8,7 +8,7 @@
 
 Summary:	Net::Pcap - Perl binding to the LBL pcap(3) packet capture library
 Summary(pl):	Net::Pcap - dowi±zanie Perla do biblioteki przechwytywania pakietów LBL pcap(3)
-Name:		perl-%{pdir}-%{pnam}
+Name:		perl-Net-Pcap
 Version:	0.04
 Release:	7
 # same as perl
