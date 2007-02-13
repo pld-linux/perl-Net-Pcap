@@ -7,7 +7,7 @@
 %define		pnam	Pcap
 
 Summary:	Net::Pcap - Perl binding to the LBL pcap(3) packet capture library
-Summary(pl.UTF-8):   Net::Pcap - dowiązanie Perla do biblioteki przechwytywania pakietów LBL pcap(3)
+Summary(pl.UTF-8):	Net::Pcap - dowiązanie Perla do biblioteki przechwytywania pakietów LBL pcap(3)
 Name:		perl-Net-Pcap
 Version:	0.12
 Release:	0.1
