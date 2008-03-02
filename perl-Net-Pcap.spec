@@ -5,7 +5,6 @@
 %include	/usr/lib/rpm/macros.perl
 %define		pdir	Net
 %define		pnam	Pcap
-
 Summary:	Net::Pcap - Perl binding to the LBL pcap(3) packet capture library
 Summary(pl.UTF-8):	Net::Pcap - dowiązanie Perla do biblioteki przechwytywania pakietów LBL pcap(3)
 Name:		perl-Net-Pcap
@@ -14,11 +13,12 @@ Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
-Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/Net/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	b150d8e0a40137fad2a7df792d80cab4
-BuildRequires:	rpm-perlprov >= 4.1-13
-BuildRequires:	perl-devel >= 1:5.8.0
+URL:		http://search.cpan.org/dist/Net-Pcap/
 BuildRequires:	libpcap-devel
+BuildRequires:	perl-devel >= 1:5.8.0
+BuildRequires:	rpm-perlprov >= 4.1-13
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -53,7 +53,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc README
 %attr(755,root,root) %{_bindir}/pcapinfo
-%{perl_vendorarch}/%{pdir}/%{pnam}.pm
-%{perl_vendorarch}/auto/%{pdir}/%{pnam}
-%{_mandir}/man3/*
+%{perl_vendorarch}/Net/Pcap.pm
+%{perl_vendorarch}/auto/Net/Pcap
 %{_mandir}/man1/*
+%{_mandir}/man3/*
