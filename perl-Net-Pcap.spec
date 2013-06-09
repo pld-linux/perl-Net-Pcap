@@ -34,7 +34,9 @@ pakietów LBL pcap(3).
 
 %build
 %{__perl} Makefile.PL \
+	CCFLAGS="%{rpmcflags} -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64" \
 	INSTALLDIRS=vendor
+
 %{__make}
 
 %{?with_tests:%{__make} test}
