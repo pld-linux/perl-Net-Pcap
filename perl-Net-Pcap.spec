@@ -57,7 +57,6 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/pcapinfo
 %{perl_vendorarch}/Net/Pcap.pm
 %dir %{perl_vendorarch}/auto/Net/Pcap
-%{perl_vendorarch}/auto/Net/Pcap/Pcap.bs
 %attr(755,root,root) %{perl_vendorarch}/auto/Net/Pcap/Pcap.so
 %{_mandir}/man1/pcapinfo.1p*
 %{_mandir}/man3/Net::Pcap.3pm*
