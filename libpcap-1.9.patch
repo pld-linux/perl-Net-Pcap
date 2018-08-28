@@ -1,0 +1,57 @@
+--- Net-Pcap-0.18/stubs.inc	2006-10-15 22:00:58.000000000 +0000
++++ Net-Pcap-0.18/stubs.inc	2018-08-28 22:05:22.861450203 +0000
+@@ -347,27 +347,6 @@
+ #endif
+ 
+ 
+-#ifndef HAVE_PCAP_OPEN
+-#ifdef __GNUC__
+-#warning "the function pcap_open() is not available"
+-#endif
+-#ifdef _MSC_VER
+-#pragma message( "Warning: the function pcap_open() is not available" )
+-#endif
+-struct pcap_rmtauth {
+-    int type;
+-    char *username;
+-    char *password;
+-};
+-
+-pcap_t * pcap_open(const char *source, int snaplen, int flags, int read_timeout, struct pcap_rmtauth *auth, char *err);
+-pcap_t * pcap_open(const char *source, int snaplen, int flags, int read_timeout, struct pcap_rmtauth *auth, char *err) {
+-    FUNCTION_NOT_IMPLEMENTED_ERROR(pcap_open)
+-    return NULL;
+-}
+-#endif
+-
+-
+ #ifndef HAVE_PCAP_SETBUFF
+ #ifdef __GNUC__
+ #warning "the function pcap_setbuff() is not available"
+@@ -508,26 +487,6 @@
+ }
+ #endif
+ 
+-
+-#ifndef HAVE_PCAP_SETSAMPLING
+-#ifdef __GNUC__
+-#warning "the function pcap_setsampling() is not available"
+-#endif
+-#ifdef _MSC_VER
+-#pragma message( "Warning: the function pcap_setsampling() is not available" )
+-#endif
+-struct pcap_samp {
+-    int method;
+-    int value;
+-};
+-
+-struct pcap_samp *pcap_setsampling(pcap_t *p);
+-struct pcap_samp *pcap_setsampling(pcap_t *p) {
+-    FUNCTION_NOT_IMPLEMENTED_ERROR(pcap_setsampling)
+-    return NULL;
+-}
+-#endif
+-
+ 
+ /*
+ 
