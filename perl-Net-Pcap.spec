@@ -16,6 +16,7 @@ Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/Net/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	18d7298dca72b53271d68646c34b6a39
 Patch0:		libpcap-1.9.patch
+Patch1:		%{name}-signals-const.patch
 URL:		http://search.cpan.org/dist/Net-Pcap/
 BuildRequires:	libpcap-devel >= 1.9.0
 BuildRequires:	perl-devel >= 1:5.8.0
@@ -32,7 +33,8 @@ pakietów LBL pcap(3).
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
-%patch -p1
+%patch0 -p1
+%patch1 -p1
 
 %build
 %{__perl} Makefile.PL \

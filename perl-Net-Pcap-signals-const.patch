@@ -1,0 +1,22 @@
+diff -ruNp Net-Pcap-0.18.orig/Makefile.PL Net-Pcap-0.18/Makefile.PL
+--- Net-Pcap-0.18.orig/Makefile.PL	2016-05-09 23:23:13.000000000 +0200
++++ Net-Pcap-0.18/Makefile.PL	2018-10-09 13:02:45.891238660 +0200
+@@ -179,6 +179,7 @@ if (eval { require ExtUtils::Constant; 1
+         OPENFLAG_DATATX_UDP OPENFLAG_NOCAPTURE_RPCAP RMTAUTH_NULL RMTAUTH_PWD
+         PCAP_SAMP_NOSAMP PCAP_SAMP_FIRST_AFTER_N_MS PCAP_SAMP_1_EVERY_N 
+         PCAP_SRC_FILE PCAP_SRC_IFLOCAL PCAP_SRC_IFREMOTE
++        PERL_SIGNALS_UNSAFE PERL_SIGNALS_SAFE
+     ));
+ 
+     ExtUtils::Constant::WriteConstants(
+diff -ruNp Net-Pcap-0.18.orig/Pcap.pm Net-Pcap-0.18/Pcap.pm
+--- Net-Pcap-0.18.orig/Pcap.pm	2016-05-15 15:24:03.000000000 +0200
++++ Net-Pcap-0.18/Pcap.pm	2018-10-09 13:22:59.120395287 +0200
+@@ -83,6 +83,7 @@ my @func_long_names = map { "pcap_$_" }
+         )],
+         openflag => [qw(
+             OPENFLAG_PROMISCUOUS  OPENFLAG_DATATX_UDP  OPENFLAG_NOCAPTURE_RPCAP
++            PERL_SIGNALS_UNSAFE   PERL_SIGNALS_SAFE
+         )],
+         pcap => [qw(
+             PCAP_ERRBUF_SIZE    PCAP_IF_LOOPBACK
