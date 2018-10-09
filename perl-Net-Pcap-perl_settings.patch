@@ -1,0 +1,11 @@
+diff -ruNp Net-Pcap-0.18.orig/Pcap.pm Net-Pcap-0.18/Pcap.pm
+--- Net-Pcap-0.18.orig/Pcap.pm	2016-05-15 15:24:03.000000000 +0200
++++ Net-Pcap-0.18/Pcap.pm	2018-10-09 13:59:35.731006832 +0200
+@@ -34,6 +34,7 @@ my @func_short_names = qw(
+     lib_version  createsrcstr  parsesrcstr  open  setbuff  setuserbuffer
+     setmode  setmintocopy  getevent  sendpacket
+     sendqueue_alloc  sendqueue_queue  sendqueue_transmit
++    perl_settings
+ );
+ 
+ my @func_long_names = map { "pcap_$_" } @func_short_names;
